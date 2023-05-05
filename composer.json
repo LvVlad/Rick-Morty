@@ -1,0 +1,19 @@
+{
+    "name": "vlad/rickandmorty",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Vladislav P.",
+            "email": "vladislavspanfilovs@gmail.com"
+        }
+    ],
+    "require": {
+        "twig/twig": "^3.6",
+        "guzzlehttp/guzzle": "^7.5",
+        "nikic/fast-route": "^1.3"
+    }
+}

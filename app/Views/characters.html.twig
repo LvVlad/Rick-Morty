@@ -1,0 +1,36 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+    <style>
+        .column {
+            column-count: 3;
+        }
+    </style>
+
+    <h2>Rick and Morty Characters:</h2>
+    <div class="column">
+        {% for character in characters %}
+            <div>
+                <article class="characterCard__Wrapper-sc-1ejywvi-0 bEklxv">
+                    <div class="characterCard__ImgWrapper-sc-1ejywvi-1 fkUcVI"><img src="{{ character.getImage() }}" alt="{{ character.getName() }}"></div>
+                    <div class="characterCard__ContentWrapper-sc-1ejywvi-2 ldvrky">
+                        <div class="section">
+                            <a>
+                                <h2>{{ character.getName() }}</h2>
+                            </a><span class="status"><span class="status__icon"></span> {{ character.getStatus() }} - {{ character.getSpecies() }}</span>
+                        </div>
+                        <div class="section">
+                            <span class="text-gray">Last known location:</span>
+                            <a>{{ character.getLastLocation() }}</a>
+                        </div>
+                        <div class="section">
+                            <span class="text-gray">First seen in:</span>
+                            <a>{{ character.getFirstSeen() }}</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}
